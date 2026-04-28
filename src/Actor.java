@@ -23,11 +23,11 @@ public class Actor extends Person{
     public boolean equals(Object o) {
         if (o == null || getClass() != o.getClass()) return false;
         Actor actor = (Actor) o;
-        return height == actor.height;
+        return height == actor.height && Objects.equals(name,actor.name) && Objects.equals(surname,actor.surname) ;
     }
 
     @Override
     public int hashCode() {
-        return Objects.hashCode(height);
+        return Objects.hash(height, name, surname);
     }
 }

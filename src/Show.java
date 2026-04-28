@@ -1,10 +1,12 @@
 import java.util.ArrayList;
+import java.util.Scanner;
 
 public class Show {
     private String title;
     private int duration;
     private Director director;
     private ArrayList<Actor> listOfActors;
+    Scanner scanner = new Scanner(System.in);
 
     public Show(String title, int duration, Director director, ArrayList<Actor> listOfActors) {
         this.title = title;
@@ -36,6 +38,8 @@ public class Show {
     public void addActor(Actor actor){
         if (!listOfActors.contains(actor)){
             listOfActors.add(actor);
+        } else {
+            System.out.println("Такой актер уже есть!");
         }
     }
 
@@ -50,9 +54,7 @@ public class Show {
     }
 
     public void printDirector(){
-        System.out.println("Информация о режиссёре спектакля " + getTitle() + ":");
-        System.out.println(director.toString());
-        System.out.println();
+        System.out.println("Информация о режиссёре спектакля " + getTitle() + ":\n" + director.toString() + "\n");
     }
 
 }
