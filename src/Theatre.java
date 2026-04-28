@@ -38,6 +38,7 @@ public class Theatre {
 
         ballet.printLibrettoText();
 
+
         //опера
         ArrayList<Actor> listOfActors3 = new ArrayList<>();
         Opera opera = new Opera("Енуфа", 180, director2, listOfActors3,
