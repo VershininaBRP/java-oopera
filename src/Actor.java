@@ -8,7 +8,6 @@ public class Actor extends Person{
         this.height = height;
     }
 
-
     @Override
     public String toString() {
         return "Actor{" +

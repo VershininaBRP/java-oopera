@@ -19,7 +19,6 @@ public class Show {
         return title;
     }
 
-
     public void changeActor(Actor actor, String surname) {
         if (!listOfActors.isEmpty()){
             System.out.println("Замена актера.");
