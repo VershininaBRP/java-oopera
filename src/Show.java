@@ -19,6 +19,8 @@ public class Show {
         return title;
     }
 
+    //по условию тз у нас подается только новый актер и фамилия заменяемого актера
+    //поэтому тут не решить проблему с однофамильцами
     public void changeActor(Actor actor, String surname) {
         if (!listOfActors.isEmpty()){
             System.out.println("Замена актера.");
