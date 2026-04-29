@@ -1,3 +1,8 @@
+package display;
+
+import human.Actor;
+import human.Director;
+
 import java.util.ArrayList;
 import java.util.Scanner;
 
@@ -30,8 +35,7 @@ public class Show {
                     return;
                 }
             }
-            System.out.println("Актер с фамилией " + surname + " не найден.");
-            System.out.println();
+            System.out.println("Актер с фамилией " + surname + " не найден.\n");
         } else {
             System.out.println("Список пуст");
         }

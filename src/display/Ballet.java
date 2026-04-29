@@ -1,3 +1,9 @@
+package display;
+
+import human.Actor;
+import human.Director;
+import human.Person;
+
 import java.util.ArrayList;
 
 public class Ballet extends MusicalShow{

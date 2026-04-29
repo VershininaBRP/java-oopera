@@ -1,3 +1,5 @@
+package human;
+
 public class Director extends Person{
     private int numberOfShows;
 
@@ -8,7 +10,7 @@ public class Director extends Person{
 
     @Override
     public String toString() {
-        return "Director{" +
+        return "human.Director{" +
                 "name='" + getName() + "\'" +
                 ", surname='" + getSurname() + "\'" +
                 '}';

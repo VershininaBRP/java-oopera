@@ -1,8 +1,14 @@
+package display;
+
+import human.Actor;
+import human.Director;
+import human.Person;
+
 import java.util.ArrayList;
 
 public class MusicalShow extends Show{
     protected Person musicAuthor;
-    private String librettoText;
+    protected String librettoText;
 
     public MusicalShow(String title, int duration, Director director,
                        ArrayList<Actor> listOfActors, Person musicAuthor, String librettoText) {
