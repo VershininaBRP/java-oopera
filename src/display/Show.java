@@ -24,18 +24,28 @@ public class Show {
         return title;
     }
 
-    //по условию тз у нас подается только новый актер и фамилия заменяемого актера
-    //поэтому тут не решить проблему с однофамильцами
     public void changeActor(Actor actor, String surname) {
+        int count = 0;
         if (!listOfActors.isEmpty()){
-            System.out.println("Замена актера.");
+            System.out.println("Замена актера " + surname);
             for (int i = 0; i < listOfActors.size(); i++) {
                 if (listOfActors.get(i).getSurname().equals(surname)) {
-                    listOfActors.set(i, actor);
-                    return;
+                    count++;
                 }
             }
-            System.out.println("Актер с фамилией " + surname + " не найден.\n");
+            if (count == 1){
+                for (int i = 0; i < listOfActors.size(); i++) {
+                    if (listOfActors.get(i).getSurname().equals(surname)) {
+                        listOfActors.set(i, actor);
+                        return;
+                    }
+                }
+            } else if (count == 0){
+                System.out.println("Актер с фамилией " + surname + " не найден.\n");
+            } else {
+                System.out.println("Актер не может быть заменен, так как есть однофамильцы!.\n");
+            }
+
         } else {
             System.out.println("Список пуст");
         }

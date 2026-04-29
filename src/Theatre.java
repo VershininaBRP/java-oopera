@@ -10,9 +10,10 @@ import java.util.ArrayList;
 
 public class Theatre {
     public static void main(String[] args) {
-        Actor actor1 = new Actor("Андрей","Миронов", Gender.MALE, 182);
+        Actor actor1 = new Actor("Давид","Иишников", Gender.MALE, 182);
         Actor actor2 = new Actor("Анатолий","Папанов", Gender.MALE, 180);
-        Actor actor3 = new Actor("Лариса","Папанов", Gender.FEMALE, 170);
+        Actor actor3 = new Actor("Лариса","Романова", Gender.FEMALE, 170);
+        Actor actor4 = new Actor("Игорь","Папанов", Gender.MALE, 180);
 
         Director director1 = new Director("Константин","Станиславский", Gender.MALE, 17);
         Director director2 = new Director("Марина","Брусникина", Gender.FEMALE, 15);
@@ -51,10 +52,11 @@ public class Theatre {
         opera.printDirector();
 
         opera.addActor(actor1);
-        opera.addActor(actor3);
+        opera.addActor(actor2);
+        opera.addActor(actor4);
         opera.printListOfActors();
 
-        opera.changeActor(actor2,actor2.getSurname());
+        opera.changeActor(actor3,actor2.getSurname());
         opera.printListOfActors();
 
         opera.printLibrettoText();
